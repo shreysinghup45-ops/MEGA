@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart | SportX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <h1>SportX</h1>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h2>Your Shopping Cart</h2>
+</section>
+
+<div class="cart-box">
+    <h2>Cart Items</h2>
+    <div id="cart-items"></div>
+
+    <h3>Total: ₹<span id="total-price">0</span></h3>
+
+    <button onclick="clearCart()" class="btn-clear">Clear Cart</button>
+
+    <form id="orderForm" action="https://formspree.io/f/meeqakzj" method="POST">
+        <input type="hidden" name="order" id="orderData">
+        <input type="hidden" name="customerName" id="customerName">
+        <input type="hidden" name="customerEmail" id="customerEmail">
+
+        <input type="text" id="nameInput" name="name" placeholder="Your Name" required>
+        <input type="email" id="emailInput" name="email" placeholder="Your Email" required>
+        <button type="submit">Checkout & Send Order</button>
+    </form>
+</div>
+
+<footer>
+    <p>© 2025 SportX | Secure Checkout</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
